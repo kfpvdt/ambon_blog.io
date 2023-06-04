@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关于centOS无法kill掉后台的问题 | 不为无益之事，安能悦有涯之生.</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script charset="utf-8" src="/js/custom.js"></script>
+    <meta name="description" content="左当风谷，右临云溪。上无凌虚之巢，下无跖实之蹊。">
+    <meta name="keywords" content="跖蹊的个人小站,vuepress,自建博客,跖蹊">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="all">
+    <meta name="author" content="跖蹊">
+    
+    <link rel="preload" href="/assets/css/0.styles.e034fe9f.css" as="style"><link rel="preload" href="/assets/js/app.08612cd1.js" as="script"><link rel="preload" href="/assets/js/3.95481a90.js" as="script"><link rel="preload" href="/assets/js/1.1954234d.js" as="script"><link rel="preload" href="/assets/js/13.678060fc.js" as="script"><link rel="prefetch" href="/assets/js/10.f7052a78.js"><link rel="prefetch" href="/assets/js/11.3cab4bfb.js"><link rel="prefetch" href="/assets/js/12.2d368306.js"><link rel="prefetch" href="/assets/js/14.5e9c30cf.js"><link rel="prefetch" href="/assets/js/15.6a151404.js"><link rel="prefetch" href="/assets/js/16.9faea314.js"><link rel="prefetch" href="/assets/js/17.d91a4135.js"><link rel="prefetch" href="/assets/js/18.26e2fb09.js"><link rel="prefetch" href="/assets/js/19.fba8070e.js"><link rel="prefetch" href="/assets/js/20.c22951cb.js"><link rel="prefetch" href="/assets/js/21.f07fb54e.js"><link rel="prefetch" href="/assets/js/22.8d1aba76.js"><link rel="prefetch" href="/assets/js/23.a0676951.js"><link rel="prefetch" href="/assets/js/24.3ff2381d.js"><link rel="prefetch" href="/assets/js/25.c5660fb9.js"><link rel="prefetch" href="/assets/js/26.12956cd1.js"><link rel="prefetch" href="/assets/js/27.dc08a174.js"><link rel="prefetch" href="/assets/js/28.37c02908.js"><link rel="prefetch" href="/assets/js/29.ff172824.js"><link rel="prefetch" href="/assets/js/30.534f3679.js"><link rel="prefetch" href="/assets/js/31.d525dfe7.js"><link rel="prefetch" href="/assets/js/32.d4d5a623.js"><link rel="prefetch" href="/assets/js/33.6d730e7a.js"><link rel="prefetch" href="/assets/js/34.c9c3969c.js"><link rel="prefetch" href="/assets/js/35.16ad93a5.js"><link rel="prefetch" href="/assets/js/36.0ceda189.js"><link rel="prefetch" href="/assets/js/37.1ae1f347.js"><link rel="prefetch" href="/assets/js/38.c36f1bdf.js"><link rel="prefetch" href="/assets/js/39.74e69345.js"><link rel="prefetch" href="/assets/js/4.42fbd73a.js"><link rel="prefetch" href="/assets/js/40.dfd05511.js"><link rel="prefetch" href="/assets/js/41.2a437a6a.js"><link rel="prefetch" href="/assets/js/42.5ff03217.js"><link rel="prefetch" href="/assets/js/43.acac2e49.js"><link rel="prefetch" href="/assets/js/44.d8ae1467.js"><link rel="prefetch" href="/assets/js/45.a7bc9809.js"><link rel="prefetch" href="/assets/js/46.6c4ddac4.js"><link rel="prefetch" href="/assets/js/47.e69747f2.js"><link rel="prefetch" href="/assets/js/48.a14bf28e.js"><link rel="prefetch" href="/assets/js/49.857b5296.js"><link rel="prefetch" href="/assets/js/5.027f47d8.js"><link rel="prefetch" href="/assets/js/50.c86ebd77.js"><link rel="prefetch" href="/assets/js/51.f2e63f5c.js"><link rel="prefetch" href="/assets/js/6.48943115.js"><link rel="prefetch" href="/assets/js/7.671be9fe.js"><link rel="prefetch" href="/assets/js/8.f8b05fbc.js"><link rel="prefetch" href="/assets/js/9.bf7cd993.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e034fe9f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-1c4f0192 data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-1c4f0192><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div><div data-v-1c4f0192></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6cbeab0a data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>不为无益之事，安能悦有涯之生.</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>跖蹊</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">不为无益之事，安能悦有涯之生.</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link"><i class="iconfont reco-eye"></i>
+  史与哲与思
+</a></div><div class="nav-item"><a href="http://zhixi.online/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  ChatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      技术分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端开发</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/后端开发/java.html" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-subitem"><a href="/技术文章/后端开发/C.html" class="nav-link"><i class="iconfont undefined"></i>
+  C#
+</a></li><li class="dropdown-subitem"><a href="/技术文章/后端开发/python.html" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li></ul></li><li class="dropdown-item"><h4>前端</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/vue/vue02.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue2
+</a></li><li class="dropdown-subitem"><a href="/技术文章/vue/vue03.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue3
+</a></li><li class="dropdown-subitem"><a href="/技术文章/vue/javascript.html" class="nav-link"><i class="iconfont undefined"></i>
+  源生
+</a></li></ul></li><li class="dropdown-item"><h4>BUG梳理</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BUG梳理/bug.html" class="nav-link"><i class="iconfont undefined"></i>
+  BUG梳理
+</a></li></ul></li><li class="dropdown-item"><h4>工具分享</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/工具分享/tool.html" class="nav-link"><i class="iconfont undefined"></i>
+  原创
+</a></li><li class="dropdown-subitem"><a href="/工具分享/toolCope.html" class="nav-link"><i class="iconfont undefined"></i>
+  转载
+</a></li></ul></li><li class="dropdown-item"><h4>面试八股</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/面试八股/interview.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试八股
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      随笔
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/树洞随笔/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  树洞随笔
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/Engage with the world.html" class="nav-link"><i class="iconfont undefined"></i>
+  Engage with the world
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/Nietzsche.html" class="nav-link"><i class="iconfont undefined"></i>
+  尼采与虚无
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/To Be Human.html" class="nav-link"><i class="iconfont undefined"></i>
+  生而为人
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/xiaobinwuyu.html" class="nav-link"><i class="iconfont undefined"></i>
+  小兵物语
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/给自己的信.html" class="nav-link"><i class="iconfont undefined"></i>
+  给自己的信
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/剑客律师.html" class="nav-link"><i class="iconfont undefined"></i>
+  剑客律师
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-blog"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/kfpvdt/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-blog"></i>
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://space.bilibili.com/457171051?spm_id_from=333.1007.0.0" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-bilibili"></i>
+  B站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.52pojie.cn/home.php?mod=space&amp;uid=799153" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-blog"></i>
+  吾爱破解
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    跖蹊
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>40</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>18</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link"><i class="iconfont reco-eye"></i>
+  史与哲与思
+</a></div><div class="nav-item"><a href="http://zhixi.online/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  ChatGPT
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      技术分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>后端开发</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/后端开发/java.html" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-subitem"><a href="/技术文章/后端开发/C.html" class="nav-link"><i class="iconfont undefined"></i>
+  C#
+</a></li><li class="dropdown-subitem"><a href="/技术文章/后端开发/python.html" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li></ul></li><li class="dropdown-item"><h4>前端</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/技术文章/vue/vue02.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue2
+</a></li><li class="dropdown-subitem"><a href="/技术文章/vue/vue03.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue3
+</a></li><li class="dropdown-subitem"><a href="/技术文章/vue/javascript.html" class="nav-link"><i class="iconfont undefined"></i>
+  源生
+</a></li></ul></li><li class="dropdown-item"><h4>BUG梳理</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BUG梳理/bug.html" class="nav-link"><i class="iconfont undefined"></i>
+  BUG梳理
+</a></li></ul></li><li class="dropdown-item"><h4>工具分享</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/工具分享/tool.html" class="nav-link"><i class="iconfont undefined"></i>
+  原创
+</a></li><li class="dropdown-subitem"><a href="/工具分享/toolCope.html" class="nav-link"><i class="iconfont undefined"></i>
+  转载
+</a></li></ul></li><li class="dropdown-item"><h4>面试八股</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/面试八股/interview.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试八股
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-faq"></i>
+      随笔
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/树洞随笔/life.html" class="nav-link"><i class="iconfont undefined"></i>
+  树洞随笔
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/Engage with the world.html" class="nav-link"><i class="iconfont undefined"></i>
+  Engage with the world
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/Nietzsche.html" class="nav-link"><i class="iconfont undefined"></i>
+  尼采与虚无
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/To Be Human.html" class="nav-link"><i class="iconfont undefined"></i>
+  生而为人
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/xiaobinwuyu.html" class="nav-link"><i class="iconfont undefined"></i>
+  小兵物语
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/给自己的信.html" class="nav-link"><i class="iconfont undefined"></i>
+  给自己的信
+</a></li><li class="dropdown-item"><!----> <a href="/树洞随笔/剑客律师.html" class="nav-link"><i class="iconfont undefined"></i>
+  剑客律师
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-blog"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/kfpvdt/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-blog"></i>
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://space.bilibili.com/457171051?spm_id_from=333.1007.0.0" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-bilibili"></i>
+  B站
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.52pojie.cn/home.php?mod=space&amp;uid=799153" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-blog"></i>
+  吾爱破解
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>关于centOS无法kill掉后台的问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/gpt%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97.html#关于用pm2锁住后台进程。" class="sidebar-link">关于用pm2锁住后台进程。</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6cbeab0a data-v-4698c43e><h3 class="title" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a>关于centOS无法kill掉后台的问题</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><input type="password" value="" data-v-6cbeab0a> <span data-v-6cbeab0a>Konck! Knock!</span> <button data-v-6cbeab0a>OK</button></label> <div class="footer" style="display:none;" data-v-6cbeab0a data-v-6cbeab0a><span data-v-6cbeab0a><i class="iconfont reco-theme" data-v-6cbeab0a></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6cbeab0a>vuePress-theme-reco</a></span> <span data-v-6cbeab0a><i class="iconfont reco-copyright" data-v-6cbeab0a></i> <a data-v-6cbeab0a><span data-v-6cbeab0a>跖蹊</span>
+            
+          <span data-v-6cbeab0a>2022 - </span>
+          2023
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>关于centOS无法kill掉后台的问题</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>跖蹊</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2023-05-28 18:53:15</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      linux
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><div class="custom-block tip"><p class="custom-block-title">开发日志</p> <p>现在我的gpt是放在腾讯云中的，因为现在要进行迭代的不多，本来是想开发个登录页面的，但是一到周末就懒得动，还有其他一些乱七八糟的事，想来最近应该打算更新（最多下个月搞个GPT4），不过因为要绕过CF的原因，目前版本用的是token，而没有用API，所以每隔14天要换一下。token14天失效。</p></div> <p>先更新了token,然后打包重新上线锁进程即可。<br> <img src="/assets/img/1.0dae1363.png" alt="1">
+这是目前的目录结构
+<img src="/assets/img/2.e7e56fbd.png" alt="2"><br>
+重新上传运行后报错，</p> <div class="language-[root@VM-4-6-centos service]# pnpm prod extra-class"><pre class="language-text"><code>
+&gt; chatgpt-web-service@1.0.0 prod /home/lighthouse/myblog/service
+&gt; node ./build/index.mjs
+
+node:events:504
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (node:net:1330:16)
+    at listenInCluster (node:net:1378:12)
+    at Server.listen (node:net:1465:7)
+    at Function.listen (/home/lighthouse/myblog/service/node_modules/.pnpm/express@4.18.2/node_modules/express/lib/application.js:635:24)
+    at file:///home/lighthouse/myblog/service/build/index.mjs:287:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:197:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:337:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:61:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1357:8)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3002
+}
+ ELIFECYCLE  Command failed with exit code 1.
+</code></pre></div><p>看都不用看，之前端口没关，关掉端口，重新跑下，然后锁住进程就可以了。
+<code>lsof -i :3002</code><br>
+果然</p> <div class="language-COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME extra-class"><pre class="language-text"><code>node    16088 root   19u  IPv6 41676461      0t0  TCP *:exlm-agent (LISTEN)
+node    16088 root   20u  IPv6 55864517      0t0  TCP VM-4-6-centos:exlm-agent-&gt;recyber.net:64325 (ESTABLISHED)
+[root@VM-4-6-centos service]#
+</code></pre></div><p>kill掉这个端口，kill 16088,再运行还是报错？再看下，怎么还有个  再kill，
+一直kill不掉，用sudo试试，我估计是因为我之前安装了pm2的原因，还是不行，那就先删除我的pm2进程
+看下我的pm2进程，果然是这样</p> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos service]# pm2 list
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ chatgpt-web-service    │ default     │ N/A     │ fork    │ 32457    │ 17m    │ 19   │ online    │ 0%       │ 71.6mb   │ root     │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+</code></pre></div><p>把他Kill了再説</p> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos service]# pm2 delete chatgpt-web-service
+[PM2] Applying action deleteProcessId on app [chatgpt-web-service](ids: [ 0 ])
+[PM2] [chatgpt-web-service](0) ✓
+┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+└────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+</code></pre></div><p>果然，再看下端口<code>sudo lsof -i :3002</code>就没了
+重新跑下应该就OK了。
+因为我的后台现在在3002端口，所以先查看下端口信息<code>sudo lsof -i :3002</code></p> <div class="language- extra-class"><pre class="language-text"><code>COMMAND  PID USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME
+node    8007 root   21u  IPv6 66230864      0t0  TCP *:exlm-agent (LISTEN)
+[root@VM-4-6-centos ~]# 
+</code></pre></div><p>正在使用端口3002的进程的命令名称是 node。可以使用以下命令将其添加到 PM2 中：
+<code>pm2 start node --name chatgpt-web-service -- ./build/index.mjs</code></p> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos ~]# pm2 start node --name chatgpt-web-service -- ./build/index.mjs
+[PM2] Starting /usr/local/lighthouse/softwares/nodejs/node/bin/node in fork_mode (1 instance)
+[PM2] Done.
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ chatgpt-web-service    │ default     │ N/A     │ fork    │ 21649    │ 0s     │ 0    │ online    │ 0%       │ 5.9mb    │ root     │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+[root@VM-4-6-centos ~]# 
+</code></pre></div><p>这将启动 node ./build/index.mjs 命令并将其添加到 PM2 中，指定应用程序名称为 &quot;chatgpt-web-service&quot;。可以使用 pm2 list 命令来查看已启动的进程列表。</p> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos ~]# pm2 list
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ chatgpt-web-service    │ default     │ N/A     │ fork    │ 0        │ 0      │ 15   │ errored   │ 0%       │ 0b       │ root     │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+[root@VM-4-6-centos ~]# 
+</code></pre></div><p>没问题了,ok。</p> <h2 id="关于用pm2锁住后台进程。"><a href="#关于用pm2锁住后台进程。" class="header-anchor">#</a> 关于用pm2锁住后台进程。</h2> <p>首先，eg：我在后台启动了进程，查看返回结果</p> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos service]# pnpm prod
+
+&gt; chatgpt-web-service@1.0.0 prod /home/lighthouse/myblog/service
+&gt; node ./build/index.mjs
+
+Server is running on port 3002
+
+</code></pre></div><p>那么可以看出运行的位置为/home/lighthouse/myblog/service</p> <blockquote><p>node ./build/index.mjs,
+想使用PM2锁定该进程，可以按照以下步骤进行操作：</p></blockquote> <p>在终端中运行以下命令，启动PM2并将应用程序添加到进程列表中：
+<code>pm2 start --name chatgpt-web-service --interpreter=node /home/lighthouse/myblog/service/build/index.mjs</code>
+同时也可以用<code>pm2 delete 0</code>删除掉进程，0指的是id号</p> <p>问了下gpt，还是有问题，改下吧</p> <div class="language- extra-class"><pre class="language-text"><code>不知道为什么我一退出服务器就500了，应该是他进程自己就退了 没锁成功
+如果您在退出服务器后进程自动终止，并且您希望进程能够在后台继续运行，您可以使用以下方法：
+
+使用 nohup 命令：在启动进程时，在命令前加上 nohup，例如：
+
+bash
+Copy code
+nohup pm2 start app.js &amp;
+这样会将进程放到后台运行，并且不会受到终端会话的影响。
+
+使用 tmux 或 screen：这些工具可以创建会话并在会话中运行进程。这样，即使您退出服务器，会话仍然会保持活动状态，进程也会继续运行。您可以通过以下步骤使用 tmux：
+
+安装 tmux（如果尚未安装）：
+
+bash
+Copy code
+sudo yum install tmux
+启动一个新的 tmux 会话：
+
+bash
+Copy code
+tmux new -s mysession
+在 tmux 会话中启动进程：
+
+bash
+Copy code
+pm2 start app.js
+按下 Ctrl + B，然后按下 D，从会话中分离。
+
+当您再次登录服务器时，可以使用以下命令重新附加到 tmux 会话：
+
+bash
+Copy code
+tmux attach -t mysession
+这样，您的进程将在后台运行，并且不会受到您退出服务器的影响。
+</code></pre></div><p>再来最后一次，大概率是因为没有用nohup的原因</p> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos ~]# pm2 list
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1  │ chatgpt-web-service    │ default     │ 1.0.0   │ fork    │ 27003    │ 12m    │ 0    │ online    │ 0%       │ 65.2mb   │ root     │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+[root@VM-4-6-centos ~]# nohup pm2 start /home/lighthouse/myblog/service/build/index.mjs --name chatgpt-web-service &amp;
+[1] 23777
+[root@VM-4-6-centos ~]# nohup: ignoring input and appending output to ‘nohup.out’
+
+</code></pre></div><p>还是不成，命令错了<br>
+正确的命令应该是 pm2 start &lt;脚本路径&gt; --name &lt;应用名称&gt; -- &lt;参数&gt;。</p> <blockquote><p>sudo systemctl list-units --type=service
+这傻逼GPT只会把人往沟里带，还好我想起来了。
+<img src="/assets/img/3.0d1c7ec5.png" alt="3">
+果然还是要多看日志<code>pm2 logs chatgpt-web-service</code>查看进程的日志输出</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>[root@VM-4-6-centos service]# pm2 logs chatgpt-web-service
+[TAILING] Tailing last 15 lines for [chatgpt-web-service] process (change the value with --lines option)
+/root/.pm2/logs/chatgpt-web-service-out.log last 15 lines:
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+0|chatgpt- |  ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND  No package.json (or package.yaml, or package.json5) was found in &quot;/root&quot;.
+
+/root/.pm2/logs/chatgpt-web-service-error.log last 15 lines:
+0|chatgpt- |   address: '::',
+0|chatgpt- |   port: 3002
+0|chatgpt- | }
+0|chatgpt- | Error: Missing OPENAI_API_KEY or OPENAI_ACCESS_TOKEN environment variable
+0|chatgpt- |     at file:///home/lighthouse/myblog/service/src/chatgpt/index.ts:33:9
+0|chatgpt- |     at ModuleJob.run (node:internal/modules/esm/module_job:197:25)
+0|chatgpt- |     at async Promise.all (index 0)
+0|chatgpt- |     at ESMLoader.import (node:internal/modules/esm/loader:337:24)
+0|chatgpt- |     at importModuleDynamicallyWrapper (node:internal/vm/module:437:15)
+0|chatgpt- | Error: Missing OPENAI_API_KEY or OPENAI_ACCESS_TOKEN environment variable
+0|chatgpt- |     at file:///home/lighthouse/myblog/service/src/chatgpt/index.ts:33:9
+0|chatgpt- |     at ModuleJob.run (node:internal/modules/esm/module_job:197:25)
+0|chatgpt- |     at async Promise.all (index 0)
+0|chatgpt- |     at ESMLoader.import (node:internal/modules/esm/loader:337:24)
+0|chatgpt- |     at importModuleDynamicallyWrapper (node:internal/vm/module:437:15)
+
+</code></pre></div><p>根据日志信息，存在两个主要问题：</p> <p>缺少 package.json 文件：日志中显示了多个 ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND 错误，指示在 /root 目录下找不到 package.json 文件。确保在运行应用程序之前在正确的目录下提供了有效的 package.json 文件。</p> <p>之前是因为我先打包后运行的，但是打包后丢失Package.json,要么改结构，要么像我之前一样直接在服务器跑<code>pnpm start</code>就可以，然后锁进程<code>pm2 start pnpm --name &quot;chatgpt-web-service&quot; -- start</code></p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.08612cd1.js" defer></script><script src="/assets/js/3.95481a90.js" defer></script><script src="/assets/js/1.1954234d.js" defer></script><script src="/assets/js/13.678060fc.js" defer></script>
+  </body>
+</html>
